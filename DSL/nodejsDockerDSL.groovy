@@ -1,4 +1,4 @@
-job('Aplicacion Node.js Docker DSL') {
+job('/Learning-jobs/Udemy-Jenkins-Cero-Experto-2024/7-Jobs-DSL-Node.js/2-app-con-node.js-docker-DSL') {
     description('Aplicación Node JS Docker DSL para el curso de Jenkins')
     scm {
         git('https://github.com/gamezssl/nodejsapp.git', 'master') { node ->
@@ -10,7 +10,7 @@ job('Aplicacion Node.js Docker DSL') {
         scm('H/7 * * * *')
     }
     wrappers {
-        nodejs('nodejs')
+        nodejs('nodejs-jenkins')
     }
     steps {
         dockerBuildAndPublish {
